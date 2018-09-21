@@ -19,12 +19,12 @@
 using System.Reflection;
 
 [assembly: AssemblyDescription("Realm is a mobile database: a replacement for SQLite")]
-[assembly: AssemblyCopyright("Copyright © 2017 Realm")]
+[assembly: AssemblyCopyright("Copyright © 2018 Realm")]
 [assembly: AssemblyCompany("Realm Inc.")]
 [assembly: AssemblyProduct("Realm C#")]
 
-[assembly: AssemblyVersion("3.2.0.0")]
-[assembly: AssemblyFileVersion("3.2.0.0")]
+[assembly: AssemblyVersion("3.3.0.0")]
+[assembly: AssemblyFileVersion("3.3.0.0")]
 
 #if DEBUG
 [assembly: AssemblyConfiguration("Debug")]

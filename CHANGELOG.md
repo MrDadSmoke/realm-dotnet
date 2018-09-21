@@ -1,3 +1,11 @@
+3.3.0 (2018-09-21)
+------------------
+
+The sync protocol version has been bumped to version 25. The server is backwards-compatible with clients using protocol version 24 or below, but clients at version 25 are not backwards-compatible with a server at protocol version 24. The server must be upgraded before any clients are upgraded.
+
+### Enahancements
+- Clients using protocol 25 now report download progress to the server, even when they make no local changes. This allows the server to do history compaction much more aggressively, especially when there are many clients that rarely or never make local changes.
+
 3.2.0 (2018-08-04)
 ------------------
 
@@ -9,7 +17,7 @@ for most certificates. Notably, it will now work out of the box for Realm Cloud 
 
 ### Bug fixes
 - When constructing queries that compare an invalid/unmanaged RealmObject (e.g. `realm.All<Foo>().Where(f => f.Bar == someBar)`),
-a meaningful exception will now be thrown rather than an obscure ArgumentNullException. 
+a meaningful exception will now be thrown rather than an obscure ArgumentNullException.
 - Added `ShouldCompactOnLaunch` to the PCL version of the library. ([dotnet-private#125](https://github.com/realm/realm-dotnet-private/issues/125))
 
 3.1.0 (2018-07-04)
